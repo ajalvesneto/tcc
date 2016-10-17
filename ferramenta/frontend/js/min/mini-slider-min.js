@@ -1,0 +1,1 @@
+$("#myCarousel").carousel({interval:5e3}),$("#carousel-text").html($("#slide-content-0").html()),$("#myCarousel").on("slid.bs.carousel",function(e){var t=$(".item.active").data("slide-number");$("#carousel-text").html($("#slide-content-"+t).html())});
