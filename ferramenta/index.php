@@ -1,14 +1,41 @@
 <?php
 	require "framework/classes/class_config.php";
+	require FWCLASSES."class_command.php";
+	$command = new Command();
+
+	if (!isset($_SESSION["id"])){
+		$_SESSION["id"] = Usefuls::mt_aleatory_code();
+	}
 
 	if (isset($_POST["url"])){
+
 		$url = str_replace("http://","",$_POST["url"]);
 		$url = explode("/", $url);
+
+		if (isset($_POST["databases"])){
+			if ($_POST["databases"] == "0"){
+				$database = "";
+			}else{
+				$database = $_POST["databases"];
+
+			}
+		}
+
+		if (isset($_POST["tables"])){
+			if ($_POST["tables"] == "0"){
+				$table = "";
+			}else{
+				$table = $_POST["tables"];
+
+			}
+		}
+
+
+
+
+		$resultInsert = $command->mt_insertComand($_POST["url"],$database,$table,$_SESSION["id"]);
 		$_SESSION["url_sqlmap"] = $url[0];
 		$_SESSION["url"] = $_POST["url"];
-	}else{
-		$_SESSION["url_sqlmap"] = "";
-		$_SESSION["url"] = "";
 	}
 ?>
 <!DOCTYPE html>
@@ -16,8 +43,8 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
-  <title>Piluku Admin Template</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+  <title>TCC - Antônio Alves</title>
   <link rel='stylesheet' href='assets/css/bootstrap.min.css'>
   <link rel='stylesheet' href='assets/css/material.css'>
   <link rel='stylesheet' href='assets/css/style.css'>
@@ -52,8 +79,11 @@
 	        	}
 	        	if (tables == ""){
 	        		tables = '<option name="0">No tables(s) found</option>';	
+	        	}else{
+					jQuery('#tables').html(tables);
+					jQuery('#group_tables').css("display","block");
 	        	}
-	        jQuery('#tables').html(tables);
+	        
 	        },
 		  	error: function(){
 		    	alert('error!');
@@ -166,6 +196,21 @@
 				<div class="form-heading">
 					horizontal form
 				</div>
+				<?php
+					if ($resultInsert == 0){
+						echo 	'<div class="alert alert-danger">
+									Ocorreu um erro. :(
+								</div>';
+					}else if ($resultInsert == 1){
+						echo 	'<div class="alert alert-success">
+									Comando Adicionado.
+								</div>';
+					}else{
+						echo 	'<div class="alert alert-warning">
+									Comando já adicionado, aguarde seu processamento.
+								</div>';
+					}
+				?>
 				<!--form-heading-->
 				<form class="form" method="post" action="index.php">
 					<!--Default Horizontal Form-->
@@ -178,10 +223,9 @@
 					</div>	
 
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group" id="databases_groups">
 								<label class="control-label">Databases:</label>
 								<select name="databases" id="databases" class="name_search form-control">
-									<option value="0">No database(s) found</option>
 								</select>
 						</div>
 
@@ -194,13 +238,12 @@
 					</div>
 
 					<div class="col-md-6">
-						<div class="form-group">
+						<div class="form-group" id="group_tables" style="display: none;">
 								<label class="control-label">Tables:</label>
 								<select name="tables" id="tables" class="name_search form-control">
-									<option value="0">No table(s) found</option>
 								</select>
 						</div>
-					</div>	
+					</div>
 				</form>
 			</div>
 		</div>

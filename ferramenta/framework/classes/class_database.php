@@ -5,7 +5,7 @@ class Database{
     private $host = "localhost";
     private $database = "tcc";
     private $user = "root";
-    private $password = "";
+    private $password = "root";
 
     protected function mt_conection() {
 
