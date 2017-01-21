@@ -1,7 +1,8 @@
 <?php 
 session_start();
+date_default_timezone_set("America/Recife");
 define("FWCLASSES","C:/xampp/htdocs/tcc/ferramenta/framework/classes/");
-require FWCLASSES."class_database.php";
+require FWCLASSES."class_connection.php";
 
 class Config{
 

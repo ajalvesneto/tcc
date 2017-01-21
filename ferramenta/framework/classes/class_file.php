@@ -19,6 +19,7 @@ class File{
     public function getLine($url,$numberLine){
         $file_content = file (Config::$dir_logs.$url);
         $line = $file_content[$numberLine];
+        $line = preg_replace('/\s/',' ',$line);
         return $line;
     }
 
@@ -51,7 +52,7 @@ class File{
                 $numberTables = str_replace("[", "", $numberTables[0]);
 
                 for ($i=2; $i <= $numberTables ; $i++) { 
-                    $table = str_replace("|","",$this::getLine($this->url,$count+$i)) . "<br>";
+                    $table = str_replace("|","",$this::getLine($this->url,$count+$i));
                     $tables[] = $table;
                 }
 
@@ -61,6 +62,27 @@ class File{
         }
 
         return $tables;
+    }
+
+    public function getColumns($handle){
+        $count = 0;
+        $tables = array();
+        while (($line = fgets($handle)) !== false) {
+            
+            if (strpos($line, 'columns]') !== false) {
+                $numberColumns = explode(" ", $line);
+                $numberColumns = str_replace("[", "", $numberColumns[0]) + 3;
+                for ($i=4; $i <= $numberColumns ; $i++) { 
+                    $column = explode("|",$this::getLine($this->url,$count+$i));
+                    $columns[] = $column[1].":".$column[2];
+                }
+
+            }
+
+            $count++;   
+        }
+
+        return $columns;
     }
 
 }

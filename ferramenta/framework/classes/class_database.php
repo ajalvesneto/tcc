@@ -1,21 +1,34 @@
-<?php
-//Configuração conexão Mysql via PDO, método conexão protecd
-class Database{
-    protected $connection;
-    private $host = "localhost";
-    private $database = "tcc";
-    private $user = "root";
-    private $password = "root";
+<?php 
+class Database extends Command{
 
-    protected function mt_conection() {
-
-        if (!isset($this->connection)) {
-            $this->connection = new PDO('mysql:host='.$this->host.';dbname='.$this->database,$this->user,$this->password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
-            $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $this->connection->setAttribute(PDO::ATTR_ORACLE_NULLS, PDO::NULL_EMPTY_STRING);
-        }
-        return $this->connection;
-
+    public function __set($atrib, $value){ 
+        $this->$atrib = $value; 
+    } 
+    
+    public function __get($atrib){ 
+        return $this->$atrib;
     }
+
+    public function mt_insertDatabases($id_request,$database_name){
+        try{
+            $connInsert = $this->mt_conection()->prepare("INSERT INTO tb_avaliable_databases (id_request,name) VALUES (:id_request,:name)");
+            $connInsert->bindValue(":id_request",$id_request, PDO::PARAM_STR);
+            $connInsert->bindValue(":name",$database_name, PDO::PARAM_STR);
+            $connInsert->execute();
+            return $this->mt_conection()->lastInsertId();
+        } catch (Exception $e) { 
+            return "0";
+        }   
+    }
+
+    public function mt_listDatabases(){
+        $connConsult = $this->mt_conection()->query("SELECT * FROM tb_avaliable_databases");
+        $command = $connConsult->fetchAll(PDO::FETCH_ASSOC);
+        return $command;
+    }
+
+
 }
 ?>
+
+
