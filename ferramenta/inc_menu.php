@@ -25,9 +25,15 @@
 			</a>
 		</li>
 		<li>
-			<a href="tables.php" class="waves-effect waves-light">
+			<a href="list_tables.php" class="waves-effect waves-light">
 				<i class="fa fa-newspaper-o"></i>
-				<span class="text ">Listar Tables</span>
+				<span class="text ">Tabelas</span>
+			</a>
+		</li>
+		<li>
+			<a href="lists_tables.php" class="waves-effect waves-light">
+				<i class="fa fa-newspaper-o"></i>
+				<span class="text ">Config</span>
 			</a>
 		</li>
 		<li>

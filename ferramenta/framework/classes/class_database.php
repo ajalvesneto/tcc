@@ -22,7 +22,7 @@ class Database extends Command{
     }
 
     public function mt_listDatabases(){
-        $connConsult = $this->mt_conection()->query("SELECT * FROM tb_avaliable_databases");
+        $connConsult = $this->mt_conection()->query("SELECT d.id,d.name,r.url FROM tb_avaliable_databases as d INNER JOIN tb_requests as r ON d.id_request = r.id  ");
         $command = $connConsult->fetchAll(PDO::FETCH_ASSOC);
         return $command;
     }

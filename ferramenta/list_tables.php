@@ -1,9 +1,9 @@
 <?php
 	require "framework/classes/class_config.php";
 	require FWCLASSES."class_command.php";
-	require FWCLASSES."class_database.php";
-	$database = new Database();
-	$listDatabases = $database->mt_listDatabases();
+	require FWCLASSES."class_table.php";
+	$tables = new Table();
+	$listTables = $tables->mt_listTables();
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -80,10 +80,10 @@
 	<!-- Page Header -->
 	<div class="page_header">
 		<div class="pull-left">
-			<i class="icon fa fa-database page_header_icon"></i>
-			<span class="main-text">Bancos de Dados</span>
+			<i class="icon fa fa-newspaper-o page_header_icon"></i>
+			<span class="main-text">Tabelas dos Banco de Dados</span>
 			<p class="text">
-				Listagem de todos os bancos de dados encontrados.
+				Listagem de todos as tabelas dos bancos de dados encontrados.
 			</p>
 		</div>
 	</div>
@@ -100,16 +100,18 @@
 						<thead>
 							<tr>
 								<th>ID</th>
-								<th>URL</th>
 								<th>NOME</th>
+								<th>BANCO DE DADOS</th>
+								<th>URL</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach ($listDatabases as $database) {?>
+							<?php foreach ($listTables as $table) {?>
 								<tr class="odd gradeX">
-									<td><?php echo $database["id"];?></td>
-									<td><?php echo $database["url"];?></td>
-									<td class="center"><?php echo $database["name"];?></td>
+									<td><?php echo $table["id"];?></td>
+									<td><?php echo $table["name"];?></td>
+									<td class="center"><?php echo $table["db"];?></td>
+									<td><?php echo $table["url"];?></td>
 								
 								</tr>
 							<?	
@@ -118,8 +120,9 @@
 						<tfoot>
 							<tr>
 								<th>ID</th>
-								<th>URL</th>
 								<th>NOME</th>
+								<th>BANCO DE DADOS</th>
+								<th>URL</th>
 							</tr>
 						</tfoot>
 					</table>
