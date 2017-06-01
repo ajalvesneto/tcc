@@ -16,6 +16,10 @@ class File{
         return $handle;
     }
 
+    public function closeFile($handle){
+        fclose($handle);
+    }
+
     public function getLine($url,$numberLine){
         $file_content = file (Config::$dir_logs.$url);
         $line = $file_content[$numberLine];
@@ -39,7 +43,7 @@ class File{
             }
             $count++;   
         }
-        return $databases;
+        return json_encode($databases);
     }
 
     public function getTables($handle){
@@ -61,7 +65,7 @@ class File{
             $count++;   
         }
 
-        return $tables;
+        return json_encode($tables);
     }
 
     public function getColumns($handle){
@@ -82,7 +86,7 @@ class File{
             $count++;   
         }
 
-        return $columns;
+        return json_encode($columns);
     }
 
 }

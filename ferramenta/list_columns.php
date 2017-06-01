@@ -1,8 +1,9 @@
 <?php
 	require "framework/classes/class_config.php";
 	require FWCLASSES."class_request.php";
-	$request = new Request();
-	$listRequests = $request->mt_listRequests();
+	require FWCLASSES."class_columns.php";
+	$columns = new Columns();
+	$listColumns = $columns->mt_listColumns();
 ?>  
 <!DOCTYPE html>
 <html lang="en">
@@ -39,6 +40,7 @@
 	<nav class="navbar navbar-default top-bar">
 		<div class="menu-bar-mobile" id="open-left"><i class="ti-menu"></i>
 		</div>
+
 	</nav>
 
 </div>
@@ -48,10 +50,10 @@
 	<!-- Page Header -->
 	<div class="page_header">
 		<div class="pull-left">
-			<i class="icon ti-target page_header_icon"></i>
-			<span class="main-text">Alvos dos Testes</span>
+			<i class="icon fa fa-list page_header_icon"></i>
+			<span class="main-text">Colunas das Tabelas dos Banco de Dados</span>
 			<p class="text">
-				Listagem de todas as urls adicionadas para verificação de possíveis vulnerabilidades.
+				Listagem de todos as colunas das tabelas dos bancos de dados encontrados.
 			</p>
 		</div>
 	</div>
@@ -68,36 +70,22 @@
 						<thead>
 							<tr>
 								<th>ID</th>
+								<th>NOME</th>
+								<th>TIPO</th>
+								<th>TABELA</th>
+								<th>BANCO DE DADOS</th>
 								<th>URL</th>
-								<th>DATA DA REQUISIÇÃO</th>
-								<th>DATA DE PROCESSAMENTO</th>
-								<th>STATUS</th>
-								<th>INJETÁVEL</th>
 							</tr>
 						</thead>
 						<tbody>
-							<?php foreach ($listRequests as $request) {?>
+							<?php foreach ($listColumns as $column) {?>
 								<tr class="odd gradeX">
-									<td><?php echo $request["id"];?></td>
-									<td><?php echo $request["url"];?></td>
-									<td class="center"><?php echo $request["request_date"];?></td>
-									<td class="center"><?php echo $request["processing_date"];?></td>
-									<?php if ($request["status"] == "3"){ ?>
-										<td class="center"><span class="badge bg-success">Concluído</span></td>
-									<?php }else if ($request 	["status"] == "2"){ ?>
-										<td class="center"><span class="badge bg-info">Processando</span></td>
-									<?php }else{?> 
-										<td class="center"><span class="badge bg-warning">A Processar</span></td>
-									<?php } ?>
-
-									<?php if ($request["vulnerable"] == "1"){ ?>
-										<td class="center"><span class="badge bg-success">SIM</span></td>
-									<?php }else if ($request["vulnerable"] == "2"){ ?>
-										<td class="center"><span class="badge bg-danger">NÃO</span></td>
-									<?php }else{?> 
-										<td class="center"><span class="badge bg-warning">A Definir</span></td>
-									<?php } ?>
-									
+									<td><?php echo $column["id"];?></td>
+									<td><?php echo $column["name"];?></td>
+									<td class="center"><?php echo $column["type"];?></td>
+									<td><?php echo $column["tb"];?></td>
+									<td><?php echo $column["db"];?></td>
+									<td><?php echo $column["url"];?></td>
 								</tr>
 							<?	
 							}?>
@@ -105,11 +93,11 @@
 						<tfoot>
 							<tr>
 								<th>ID</th>
+								<th>NOME</th>
+								<th>TIPO</th>
+								<th>TABELA</th>
+								<th>BANCO DE DADOS</th>
 								<th>URL</th>
-								<th>DATA DA REQUISIÇÃO</th>
-								<th>DATA DE PROCESSAMENTO</th>
-								<th>STATUS</th>
-								<th>INJETÁVEL</th>
 							</tr>
 						</tfoot>
 					</table>

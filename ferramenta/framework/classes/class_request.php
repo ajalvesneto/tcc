@@ -1,5 +1,5 @@
 <?php 
-class Command extends Connection{
+class Request extends Connection{
 
     public function __set($atrib, $value){ 
         $this->$atrib = $value; 
@@ -9,7 +9,7 @@ class Command extends Connection{
         return $this->$atrib;
     }
 
-    public function mt_insertComand($url,$session){
+    public function mt_insertRequest($url,$session){
     	try{
     		$connConsult =  $this->mt_conection()->prepare("SELECT * FROM tb_requests WHERE session_id = :session_id AND status = '1'");
     		$connConsult->bindValue(":session_id",$session, PDO::PARAM_STR);
@@ -30,7 +30,7 @@ class Command extends Connection{
 		} 	
     }
 
-    public function mt_updateComand($id,$status){
+    public function mt_updateRequest($id,$status){
         try{
            
             $conn = $this->mt_conection()->prepare("UPDATE tb_requests SET status = :status, processing_date=:processing_date WHERE id = :id");
@@ -44,16 +44,28 @@ class Command extends Connection{
         }   
     }
 
-    public function mt_listComand(){
+    public function mt_listRequest(){
     	$connConsult = $this->mt_conection()->query("SELECT * FROM tb_requests WHERE status = '1' LIMIT 0,1");
-    	$command = $connConsult->fetch(PDO::FETCH_ASSOC);
-    	return $command;
+    	$request = $connConsult->fetch(PDO::FETCH_ASSOC);
+    	return $request;
     }
 
-    public function mt_listComands(){
+    public function mt_listRequests(){
         $connConsult = $this->mt_conection()->query("SELECT * FROM tb_requests ORDER BY id ASC");
-        $commands = $connConsult->fetchAll(PDO::FETCH_ASSOC);
-        return $commands;
+        $requests = $connConsult->fetchAll(PDO::FETCH_ASSOC);
+        return $requests;
+    }
+
+    public function mt_isInjectable($idRequest){
+        $connConsult = $this->mt_conection()->query("SELECT * FROM tb_avaliable_databases WHERE id_request = '".$idRequest."' ORDER BY id ASC");
+        $count = $connConsult->rowCount();
+
+        if ($count == 0){
+            $connUpdt = $this->mt_conection()->query("UPDATE tb_requests SET vulnerable = '2' WHERE id = '".$id_request."'");  
+        }else{
+            $connUpdt = $this->mt_conection()->query("UPDATE tb_requests SET vulnerable = '1' WHERE id = '".$id_request."'");
+        }
+
     }
 }
 ?>

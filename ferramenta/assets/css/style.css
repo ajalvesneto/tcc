@@ -282,7 +282,7 @@ html {
 }
 .left-bar .admin-logo,
 .side-bar .admin-logo {
-  background-color: #2196f3;
+  background-color: #FAFCFF;
   min-height: 70px;
   padding-left: 15px;
   position: fixed !important;
@@ -298,11 +298,12 @@ html {
 .left-bar .admin-logo .logo-holder,
 .side-bar .admin-logo .logo-holder {
   width: 100px;
-  padding-top: 25px;
+  padding-top: 10px;
+  margin-left: 10px;
 }
 .left-bar .admin-logo .logo-holder .logo,
 .side-bar .admin-logo .logo-holder .logo {
-  width: 100%;
+  
 }
 .left-bar .admin-logo a.menu-bar,
 .side-bar .admin-logo a.menu-bar {
@@ -313,9 +314,9 @@ html {
   position: absolute;
   right: 0;
   height: 100%;
-  background-color: #0c82df;
+  background-color: #FAFCFF;
   text-align: center;
-  color: #FFFFFF;
+  color: #4b8cc0;
   padding-top: 15px;
   text-decoration: none;
 }

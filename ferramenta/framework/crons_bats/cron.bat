@@ -1,1 +1,1 @@
-"C:\xampp\php\php.exe" C:\xampp\htdocs\tcc\ferramenta\framework\crons_files\teste.php
+"C:\xampp\php\php.exe" C:\xampp\htdocs\tcc\ferramenta\framework\crons_files\processa.php

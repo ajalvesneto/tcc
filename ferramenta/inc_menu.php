@@ -14,7 +14,7 @@
 				<i class="chevron ti-angle-right"></i>
 			</a>
 			<ul class="list-unstyled" id="piluku_premium">
-				<li><a href="insert_target.php">Adicionar</a></li>
+				<li><a href="index.php">Adicionar</a></li>
 				<li><a href="list_targets.php">Listar</a></li>
 			</ul>
 		</li>
@@ -31,15 +31,21 @@
 			</a>
 		</li>
 		<li>
+			<a href="list_columns.php" class="waves-effect waves-light">
+				<i class="fa fa-list"></i>
+				<span class="text ">Colunas</span>
+			</a>
+		</li>
+		<li>
 			<a href="lists_tables.php" class="waves-effect waves-light">
-				<i class="fa fa-newspaper-o"></i>
-				<span class="text ">Config</span>
+				<i class="icon ti-settings"></i>
+				<span class="text ">Configurações</span>
 			</a>
 		</li>
 		<li>
 			<a href="about.php" class="waves-effect waves-light">
 				<i class="ion-information-circled"></i>
-				<span class="text ">About</span>
+				<span class="text ">Sobre</span>
 			</a>
 		</li
 	</ul>

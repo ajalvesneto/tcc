@@ -1,6 +1,6 @@
 <?php 
 
-class Table extends Command{
+class Table extends Request{
 
     public function __set($atrib, $value){ 
         $this->$atrib = $value; 
@@ -25,8 +25,8 @@ class Table extends Command{
 
     public function mt_listTables(){
         $connConsult = $this->mt_conection()->query("SELECT t.id,t.name,d.name AS db, r.url FROM tb_avaliable_tables AS t INNER JOIN tb_avaliable_databases as d ON d.id = t.id_database INNER JOIN tb_requests AS r ON r.id = t.id_request");
-        $command = $connConsult->fetchAll(PDO::FETCH_ASSOC);
-        return $command;
+        $tables = $connConsult->fetchAll(PDO::FETCH_ASSOC);
+        return $tables;
     }
 }
 ?>

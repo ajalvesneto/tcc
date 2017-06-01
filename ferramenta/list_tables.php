@@ -1,6 +1,6 @@
 <?php
 	require "framework/classes/class_config.php";
-	require FWCLASSES."class_command.php";
+	require FWCLASSES."class_request.php";
 	require FWCLASSES."class_table.php";
 	$tables = new Table();
 	$listTables = $tables->mt_listTables();
@@ -40,36 +40,7 @@
 	<nav class="navbar navbar-default top-bar">
 		<div class="menu-bar-mobile" id="open-left"><i class="ti-menu"></i>
 		</div>
-
-		<form class="navbar-left" role="search">
-			<div class="search">
-				<input type="text" class="form-control" placeholder="Search">
-			</div>
-		</form>
-		<ul class="nav navbar-nav navbar-right top-elements">
-			<li class="piluku-dropdown dropdown">
-				<!-- @todo Change design here, its bit of odd or not upto usable -->
-
-				<a href="#" class="dropdown-toggle avatar_width" data-toggle="dropdown" role="button" aria-expanded="false"><span class="avatar-holder"><img src="assets/images/avatar.jpeg" alt=""></span><span class="avatar_info">Bootstrap</span><span class="drop-icon"><!-- <i class="ion ion-chevron-down"></i> --></span></a>
-				<ul class="dropdown-menu dropdown-piluku-menu  animated fadeInUp wow avatar_drop neat_drop dropdown-right" data-wow-duration="1500ms" role="menu">
-					<li>
-						<a href="profile.html"> <i class="ion-android-settings"></i>Settings</a>
-					</li>
-					<li>
-						<a href="mailbox.html"> <i class="ion-android-chat"></i>Messages</a>
-					</li>
-					<li>
-						<a href="dropzone-file-upload.html"> <i class="ion-android-cloud-circle"></i>Upload</a>
-					</li>
-					<li>
-						<a href="profile.html"> <i class="ion-android-create"></i>Edit profile</a>
-					</li>
-					<li>
-						<a href="lock-screen.html" class="logout_button"><i class="ion-power"></i>Logout</a>
-					</li>   
-				</ul>
-			</li>
-		</ul>
+		
 
 	</nav>
 

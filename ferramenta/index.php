@@ -1,7 +1,7 @@
 <?php
 	require "framework/classes/class_config.php";
-	require FWCLASSES."class_command.php";
-	$command = new Command();
+	require FWCLASSES."class_request.php";
+	$request = new Request();;
 
 	if (!isset($_SESSION["id"])){
 		$_SESSION["id"] = Usefuls::mt_aleatory_code();
@@ -12,7 +12,7 @@
 		$url = str_replace("http://","",$_POST["url"]);
 		$url = explode("/", $url);
 
-		$resultInsert = $command->mt_insertComand($_POST["url"],$_SESSION["id"]);
+		$resultInsert = $request->mt_insertRequest($_POST["url"],$_SESSION["id"]);
 
 		$_SESSION["url_sqlmap"] = $url[0];
 		$_SESSION["url"] = $_POST["url"];
@@ -24,7 +24,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'inc_head.php';?>
-
 <body class="">
   <div class="piluku-preloader text-center">
   <div class="loader">Loading...</div>
@@ -54,30 +53,6 @@
 		<div class="menu-bar-mobile" id="open-left"><i class="ti-menu"></i>
 		</div>
 
-		<ul class="nav navbar-nav navbar-right top-elements">	
-			<li class="piluku-dropdown dropdown">
-				<!-- @todo Change design here, its bit of odd or not upto usable -->
-
-				<a href="#" class="dropdown-toggle avatar_width" data-toggle="dropdown" role="button" aria-expanded="false"><span class="avatar-holder"><img src="assets/images/avatar.jpeg" alt=""></span><span class="avatar_info">Bootstrap</span><span class="drop-icon"><!-- <i class="ion ion-chevron-down"></i> --></span></a>
-				<ul class="dropdown-menu dropdown-piluku-menu  animated fadeInUp wow avatar_drop neat_drop dropdown-right" data-wow-duration="1500ms" role="menu">
-					<li>
-						<a href="profile.html"> <i class="ion-android-settings"></i>Settings</a>
-					</li>
-					<li>
-						<a href="mailbox.html"> <i class="ion-android-chat"></i>Messages</a>
-					</li>
-					<li>
-						<a href="dropzone-file-upload.html"> <i class="ion-android-cloud-circle"></i>Upload</a>
-					</li>
-					<li>
-						<a href="profile.html"> <i class="ion-android-create"></i>Edit profile</a>
-					</li>
-					<li>
-						<a href="lock-screen.html" class="logout_button"><i class="ion-power"></i>Logout</a>
-					</li>   
-				</ul>
-			</li>
-		</ul>
 	</nav>
 </div>
 <!-- /top-bar -->
@@ -89,7 +64,7 @@
 			<i class="icon ti-target page_header_icon"></i>
 			<span class="main-text">Alvo dos Testes</span>
 			<p class="text">
-				Piluku elements are designed in an awesome way which gives a unified and professional look to the forms. 
+				Insira aqui a url que deseja verificar. 
 			</p>
 		</div>	
 	</div>
@@ -136,8 +111,8 @@
 
 						<div class="form-group">
 							<button class="btn btn-primary">
-							<i class="ion ion-search"></i>
-							<span>Link Button</span>
+							<i class="fa fa-plus"></i>
+							<span>Adicionar</span>
 							</button>
 						</div>	
 					</div>
